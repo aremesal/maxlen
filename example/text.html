@@ -19,11 +19,11 @@
                 strPostText: 'chars left',
                 classBase: 'anotherclass' });
             
-            $('input#normal').maxlen({
-                maxChars: 28,
+            $('input#input1').maxlen({
+                maxChars: 10,
                 callbackFunc: 'alertMe' });
 
-            $('input#normal2').maxlen({
+            $('input#input2').maxlen({
                 maxChars: 8,
                 showMessage: false,
                 callbackFunc: 'alertMe' });
@@ -40,12 +40,12 @@
     </style>
   </head>
   <body>
-      <textarea class="maxlen" cols="50" rows="5"></textarea>
+      <textarea class="maxlen" id="txtarea1" cols="50" rows="5"></textarea>
       <br /><br />
-      <textarea class="maxlen" cols="50" rows="5" maxlength="10"></textarea>
+      <textarea class="maxlen" id="txtarea2" cols="50" rows="5" maxlength="10"></textarea>
       <br /><br />
-      <input type="text" name="asdfasdf" />
+      <input type="text" name="asdfasdf" id="input1" />
       <br /><br />
-      <input type="text" name="asdfasdf" />
+      <input type="text" name="asdfasdf" id="input2" />
   </body>
 </html>
