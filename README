@@ -8,7 +8,7 @@ GENERAL INFORMATION
 
 Maxlen provides a convenient way to control the maximum number of characters you want to permit into a textarea. It's a jQuery plugin, so you need jQuery framework to use it.
 
-The plugin can be associated to one, some or all of textareas and inputs in a web page, with same or different options each. The plugin can automatically write a message after the element to show the user the number of remaining characters (message can be configured). Maxlen is capable to call an external function of your own when reached the maximum number of characters. You can easily set appearance with CSS.
+The plugin can be associated to one, some or all of textareas and inputs in a web page, with same or different options each. The plugin can automatically write a message after the element to show the user the number of remaining characters (message can be configured). Maxlen is capable to call an external function of your own when reached the maximum number of characters. You can easily set appearance with CSS. And it's just 2KB minimified.
 
 Maxlen and all code provided here are free to use under the MIT license. 
 
@@ -19,7 +19,7 @@ INSTALLING
 Just put the plugin in any directory you want into your web's directory tree, and make sure you include jQuery (from Google's CDN, if you want):
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.maxlen.js"></script>
+<script type="text/javascript" src="js/jquery.maxlen.min.js"></script>
 
 USING THE PLUGIN
 
@@ -92,7 +92,7 @@ You can check the included example for more practical vision of styling.
 
 SUPPORT
 
-Perhaps you can send any question, bug or problem on Github, but I can't promise you I'll read and answer all of them. 
+Perhaps you can send any question, bug or problem on Github, but I can't promise you I'll read and answer all of them. You can also contribute with code if you want (you can find an unminimified version at src/ directory).
 
 
 
