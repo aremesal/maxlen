@@ -1,5 +1,5 @@
 /*
- * Maxlen v 0.1.2 2011-02-10
+ * Maxlen v 0.1 2011-02-10
  * http://aremesal.net/seccion-maxlen
  *
  * Copyright (c) 2011, Aremesal
