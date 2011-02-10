@@ -1,0 +1,101 @@
+Maxlen
+
+A jQuery plugin to get control over max number of characters into textareas
+
+
+
+GENERAL INFORMATION
+
+Maxlen provides a convenient way to control the maximum number of characters you want to permit into a textarea. It's a jQuery plugin, so you need jQuery framework to use it.
+
+The plugin can be associated to one, some or all of textareas and inputs in a web page, with same or different options each. The plugin can automatically write a message after the element to show the user the number of remaining characters (message can be configured). Maxlen is capable to call an external function of your own when reached the maximum number of characters. You can easily set appearance with CSS.
+
+Maxlen and all code provided here are free to use under the MIT license. 
+
+
+
+INSTALLING
+
+Just put the plugin in any directory you want into your web's directory tree, and make sure you include jQuery (from Google's CDN, if you want):
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.maxlen.js"></script>
+
+USING THE PLUGIN
+
+This plugin applies to any textarea or input you have in your HTML. To associate with all textareas, just use:
+
+<script type="text/javascript">
+        
+    $(document).ready(function() {
+
+        $('textarea').maxlen();
+
+    });
+</script>
+
+Or you can associate with just an element (or some of them) by using any jQuery selector:
+
+$('textarea#txtComments').maxlen();
+$('.withMaxLength').maxlen();
+
+
+
+PARAMETERS
+
+Maxlen accepts a handful of parameters to change its behavior. You can set these parameters:
+
+maxChars: 	Maximun number of characters, default: 200
+showMessage: 	Defines if show the remaining characters message, default: true
+strPreText: 	Text for message, previous to number of available characters, default: ''
+strPostText: 	Text for message, next to number of available characters, default: ''
+classBase: 	Base root for CSS classes added by plugin, default: 'jmaxlen'
+callbackFunc: 	Callback function to call when maximun number is reached, default: ''
+
+You can set these parameters when initialize plugin:
+
+<script type="text/javascript">
+        
+    $(document).ready(function() {
+
+	$('textarea').maxlen({
+                maxChars: 120,
+                strPreText: 'You have',
+                strPostText: 'characters remaining',
+                classBase: 'anotherclass',
+		callbackFunc: 'alertLimit'
+	 });
+    });
+</script>
+
+You can define the max length for a textarea using an HTML attribute, if you prefer:
+
+<textarea maxlength="120"></textarea>
+
+If attribute maxlength is defined, it has preference over plugin parameter.
+
+
+
+STYLING
+
+You can take control over the message and element using CSS. By default, this plugin creates all elements with CSS classes like 'jmaxlen-XYZ', where XYZ can references each element. So, without changing this base class, you can interact with:
+
+jmaxlen-txt: Plugin adds this class to textarea or input elements.
+jmaxlen-sp: Plugin adds this class to span for message. This span has another child span around the actual number of characters remaining.
+jmaxlen-sperror: When maximun number of characters is reached, the plugin adds this class to message span.
+
+If you change the name of base class via parameter classBase, you'll see these classes been created acordingly.
+
+You can check the included example for more practical vision of styling.
+
+
+
+SUPPORT
+
+Perhaps you can send any question, bug or problem on Github, but I can't promise you I'll read and answer all of them. 
+
+
+
+AUTHOR
+
+I'm Alvaro Remesal, an spanish web developer. You can contact me at https://github.com/aremesal and at http://aremesal.net
