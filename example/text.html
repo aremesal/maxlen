@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Example of jquery.maxlen</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript" src="../src/jquery.maxlen.js"></script>
+    <script type="text/javascript">
+        
+        function alertMe(e) { alert("Don't write more! Max: "+e.data('maxChars') ); }
+
+        $(document).ready(function() {
+
+            $('textarea#txtarea1').maxlen({maxChars: 20});
+
+            $('textarea#txtarea2').maxlen({
+                strPreText: '',
+                strPostText: 'chars left',
+                classBase: 'anotherclass' });
+            
+            $('input#normal').maxlen({
+                maxChars: 28,
+                callbackFunc: 'alertMe' });
+
+            $('input#normal2').maxlen({
+                maxChars: 8,
+                showMessage: false,
+                callbackFunc: 'alertMe' });
+
+        });
+    </script>
+    <style type="text/css">
+        .jmaxlen-sperror span { color: red; }
+        .jmaxlen-sp { display: block; }
+
+        .anotherclass-sperror span { color: red; font-weight: bold; }
+        .anotherclass-sperror { text-decoration: underline; }
+        .anotherclass-sp { display: block; color: #CCC;}
+    </style>
+  </head>
+  <body>
+      <textarea class="maxlen" id="txtarea1" cols="50" rows="5"></textarea>
+      <br /><br />
+      <textarea class="maxlen" id="txtarea2" cols="50" rows="5" maxlength="10"></textarea>
+      <br /><br />
+      <input type="text" name="asdfasdf" id="normal" />
+      <br /><br />
+      <input type="text" name="asdfasdf" id="normal2" />
+  </body>
+</html>
